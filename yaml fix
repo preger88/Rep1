@@ -1,9 +1,8 @@
-apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: frontend           
-  title: Frontend          
+  name: frontend           # stable, URL-safe
+  title: Frontend          # pretty label in the UI
 spec:
-  type: service          
-  lifecycle: experimental  
+  type: website            # or service / library
+  lifecycle: experimental  # production | deprecated | experimental
   owner: user:preger88  
