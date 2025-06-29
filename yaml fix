@@ -1,8 +1,13 @@
-kind: Component
-metadata:
-  name: frontend           # stable, URL-safe
-  title: Frontend          # pretty label in the UI
-spec:
-  type: website            # or service / library
-  lifecycle: experimental  # production | deprecated | experimental
-  owner: user:preger88  
+- kind: pull-request
+  selector:
+    query: 'true'
+  port:
+    entity:
+      mappings:
+        identifier: .id|tostring
+        blueprint: '"githubPullRequest"'
+        relations:
+          repository: .head.repo.full_name
+          git_hub_assignees: '[.assignees[].login]'
+          git_hub_reviewers: '[.requested_reviewers[].login]'
+          git_hub_creator: .user.login
