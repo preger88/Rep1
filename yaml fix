@@ -1,0 +1,5 @@
+kind: Component
+metadata:
+  name: frontend
+  title: Frontend
+  owner: preger88
